@@ -1,0 +1,32 @@
+Sex - F:0 M:1 |
+Age - Numeric |
+Address - U:0 R:1 |
+Famsize - LE3:0 GT3:1 |
+Pstatus - T:0 A:1 |
+Medu - numeric: 0-4 |
+Fedu - numeric: 0-4 |
+Mjob - nominal: teacher: 0, health care related:1, civil services :2, at_home: 3, or other:4 |
+Fjob - nominal: teacher, health care related, civil services, at_home, or other |
+guardian - nominal: mother:0, father:1, other:2(4)
+traveltime - numeric:
+studytime - weekly study time: numeric: 1-2,2-5, 5-10 (hours)
+failures - numeric:
+schoolsup - binary: yes:1 or no:0
+famsup - family edu support: binary: yes or no
+activities - extra curicular activities: binary: yes or no
+nursery - attended nursery school binary: yes or no
+higher - wants higher edu?: binary: yes or no
+internet - internet access: binary: yes or no
+romantic - romantic relationship: binary: yes or no
+famrel - quality of family relationships: numeric: 1-5 (5= very good)
+freetime - free time after school: numeric: 1-5 (5 = a lot)
+goout - " going out with friends?" numeric : 1-5 (5 = very high)
+health - current health status: numeric: 1-5 (5 = very good)
+absences -  number of school absences: numeric: (0 to 93)
+G1 -first period grade (numeric: from 0 to 20)
+G2 - second period grade (numeric: from 0 to 20)
+G3 - final grade (numeric: from 0 to 20, output target)
+
+
+Dalc - workday alcohol consumption: numeric: 1-5 (5 = a lot)
+Walc - weekend alcohol consumption: numeric: 1-5 (5 = a lot)
