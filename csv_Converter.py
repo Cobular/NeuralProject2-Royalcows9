@@ -5,12 +5,25 @@ from numpy import *
 
 dirOfNetwork = os.path.dirname(__file__)
 
-columnInQuestion = 21
-dataMax = 0
-dataMin = 0
+columnInQuestion = 29
 
 print(columnInQuestion)
 
+with open(dirOfNetwork + "/Datasets/mainData_Normalized.csv", "r") as sourceCSV:
+    csvReaderHere = csv.reader(sourceCSV)
+    with open(dirOfNetwork + "/Datasets/mainData_Normalized2.csv", "w") as resultCSV:
+        csvWriterHere = csv.writer(resultCSV, lineterminator='\n')
+        for row in csvReaderHere:
+            if float(row[columnInQuestion]) <= 0.3:
+                row[columnInQuestion] = 0
+                row[columnInQuestion] = "%.3f" % row[columnInQuestion]
+                csvWriterHere.writerow(row)
+            elif float(row[columnInQuestion]) > 0.4:
+                row[columnInQuestion] = 1
+                row[columnInQuestion] = "%.3f" % row[columnInQuestion]
+                csvWriterHere.writerow(row)
+
+"""
 with open(dirOfNetwork + "/Datasets/mainData_Normalized.csv", "r") as sourceCSV:
     csvReaderHere = csv.reader(sourceCSV)
     dataMax = max(int(column[columnInQuestion].replace(',', '')) for column in csvReaderHere)
@@ -33,6 +46,5 @@ with open(dirOfNetwork + "/Datasets/mainData_Normalized.csv", "r") as sourceCSV:
 # Max for column 2: 20
 # Min for column 2: 15
 
-
-
+"""
 
